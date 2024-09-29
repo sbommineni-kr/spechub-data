@@ -1,3 +1,11 @@
+# Audit Log
+# Author: Sudheer Bommineni
+# Email: sudheer.bommineni@kroger.com
+# ID: KON8383
+# Date: 2024-09-29
+# Description: This script is used to backup all collections in a MongoDB database.
+
+
 from core.dl_etlbase import DLETLBase
 from core.dl_logger import DLLogger
 import os 

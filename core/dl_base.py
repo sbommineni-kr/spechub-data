@@ -1,4 +1,9 @@
-#Base class for all DL Modules 
+# Audit Log
+# Author: Sudheer Bommineni
+# Email: sudheer.bommineni@kroger.com
+# ID: KON8383
+# Date: 2024-09-29
+# Description: This is the base class for all ETL jobs.
 import argparse
 from .dl_dateutils import DLDateUtils
 from .dl_mongo import DLMongo
