@@ -1,4 +1,11 @@
-#class for all ETL jobs
+# Audit Log
+# Author: Sudheer Bommineni
+# Email: sudheer.bommineni@kroger.com
+# ID: KON8383
+# Date: 2024-09-29
+# Description: This is the base class for all ETL jobs.
+
+
 from .dl_base import DLBase
 from .dl_logger import DLLogger
 from .dl_mongo import DLMongo

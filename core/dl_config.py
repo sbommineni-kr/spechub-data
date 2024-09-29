@@ -1,4 +1,9 @@
-#config file reader when inititalizing the dl_config object in base class 
+# Audit Log
+# Author: Sudheer Bommineni
+# Email: sudheer.bommineni@kroger.com
+# ID: KON8383
+# Date: 2024-09-29
+# Description: This is a python class that reads the config file and returns the config object
 
 import json 
 import os
