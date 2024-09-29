@@ -1,0 +1,22 @@
+mongodb:
+  dev:
+    connection_string: mongodb://mngsb:mngsb@u060emngd801.kroger.com:28117/DEV_SB
+    database: DEV_SB
+  test:
+    connection_string: mongodb://svc8827specbookt:DW9YRK0yH2jfga0EVCDi5TRVG@u060emngd401.kroger.com:28117/?authMechanism=PLAIN&authSource=%24external
+    database: TEST_SB
+  uat:
+    connection_string: mongodb://svc8827mdbspecbooks:ZyijSC3CZcLrdM41e53SwjKKaH@u060emngd201.kroger.com:28117/?authMechanism=PLAIN&authSource=%24external
+    database: STAGE_SB
+  prod:
+    connection_string: mongodb://svc8827mdbspecbookp:duVbcSymPcpwDYMMFkPq@u060emngd101.kroger.com:28117/?authMechanism=PLAIN&authSource=%24external
+    database: PROD_SB
+
+
+mongodb-jobs:
+  load_all_collections_backup:
+    arguments:
+      start_date: None
+      end_date: None
+
+
