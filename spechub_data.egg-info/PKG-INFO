@@ -1,3 +1,15 @@
+Metadata-Version: 2.1
+Name: spechub-data
+Version: 0.1.0
+Summary: Data services for SpecHub application
+Home-page: https://github.com/sbommineni-kr/spechub-data
+Author: Sudheer Bommienni
+Author-email: sudheer.bommineni@kroger.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
 # spechub-data
 Repository for spechub dataservices
 
