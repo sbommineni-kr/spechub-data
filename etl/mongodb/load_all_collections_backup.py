@@ -4,6 +4,7 @@
 # ID: KON8383
 # Date: 2024-09-29
 # Description: This script is used to backup all collections in a MongoDB database.
+# Exection : python /Users/sudheer.bomminenikroger.com/Desktop/work/git/spechub-data/etl/mongodb/load_all_collections_backup.py -c config/datalake.yaml -a '{"path":"/Users/sudheer.bomminenikroger.com/Desktop/work/git/mongodb_collections_backup"}' -j mongodb -n load_all_collections_backup -v prod
 
 
 from core.dl_etlbase import DLETLBase

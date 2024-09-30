@@ -7,6 +7,9 @@
 
 
 import pymongo
+from .dl_logger import DLLogger
+
+dl_log = DLLogger(__name__)
 
 class DLMongo:
     def __init__(self, connection_string, database, collection=None):
@@ -20,6 +23,16 @@ class DLMongo:
         if collection is None:
             collection = self.collection
         return self.mongodb[collection]
+    
+    def create_collection(self, collection):
+        if collection not in self.mongodb.list_collection_names():
+            dl_log.info(f"Creating collection {collection}")
+            self.mongodb.create_collection(collection)
+            dl_log.info(f"Collection {collection} created")
+            return self.get_collection(collection)
+        else:
+            dl_log.info(f"Collection {collection} already exists")
+            return self.get_collection(collection)
 
     def get_database(self):
         return self.mongo_client[self.database]

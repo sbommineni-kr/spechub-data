@@ -18,5 +18,11 @@ mongodb-jobs:
     arguments:
       start_date: None
       end_date: None
+  
+  load_apply_change_streams:
+    arguments:
+      start_date: None
+      end_date: None
+      
 
 
