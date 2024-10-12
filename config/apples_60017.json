@@ -1,0 +1,840 @@
+{
+    "subCommodityCode": "60017",
+    "subCommodityName": "APPLES COSMIC CRISP ORGANIC",
+    "commodityCode": "600",
+    "defaultFlag": "Y",
+    "effectiveStartDate": "1900-01-01",
+    "effectiveEndDate": "9999-01-01",
+    "fullSpec": true,
+    "status": "Draft",
+    "configVersion": "1.0",
+    "specVersion": "1.0",
+    "lastUpdatedUser": "",
+    "lastUpdatedUTCTimestamp": "",
+    "disableDQA": false,
+    "subCommodityIcon": "Red Apple",
+    "variations": {
+      "variationAttributes": [
+        {
+          "variationType": "Package Size",
+          "variationName": "Bulk",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "Adding a variation allows you to define slightly different specs for each variation option.Link",
+          "secondaryVariationType": "",
+          "secondaryVariationName": "",
+          "secondarydqaHelperText": "",
+          "secondarydqaHelperChecked": false
+        }
+      ]
+    },
+    "spec": {
+      "unitOfMeasure": {
+        "pullUom": {
+          "pullType": {
+            "showDqaHelper": false,
+            "dqaHelperChecked": false,
+            "dqaHelperText": "",
+            "value": "Count",
+            "displayFlag": true
+          },
+          "uomToPull": {
+            "showDqaHelper": false,
+            "dqaHelperChecked": false,
+            "dqaHelperText": "",
+            "value": "Apples",
+            "displayFlag": true
+          }
+        },
+        "additionalDescriptor": {
+          "showDqaHelper": false,
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "value": "From Different Cases"
+        },
+        "inspectionUom": {
+          "inspectionType": {
+            "showDqaHelper": false,
+            "dqaHelperChecked": false,
+            "dqaHelperText": "",
+            "value": "Count",
+            "displayFlag": true
+          },
+          "uomOfInspection": {
+            "showDqaHelper": false,
+            "dqaHelperChecked": false,
+            "dqaHelperText": "",
+            "value": "Apples",
+            "displayFlag": true
+          }
+        }
+      },
+      "smartSamples": {
+        "positiveTrend": {
+          "inspectionDetailLevel": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "Dynamic"
+          },
+          "minimumSampleQuantity": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "3"
+          },
+          "incrementAmount": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "3"
+          },
+          "maximumSampleQuantity": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "9"
+          },
+          "threshold": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": 50
+          }
+        },
+        "negativeTrend": {
+          "inspectionDetailLevel": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "Dynamic"
+          },
+          "minimumSampleQuantity": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "5"
+          },
+          "incrementAmount": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "5"
+          },
+          "maximumSampleQuantity": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": "15"
+          },
+          "threshold": {
+            "showDqaHelper": false,
+            "dqaHelperText": "",
+            "dqaHelperChecked": false,
+            "displayFlag": true,
+            "value": 50
+          }
+        }
+      },
+      "guidelines": {
+        "productGuidelines": {
+          "value": "<p>This spec applies to bulk organic cosmic crisp apples.</p>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "showDqaHelper": false,
+          "dqaHelperText": ""
+        }
+      },
+      "composite": {
+        "brix": {
+          "value": "<p>12</p>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "showDqaHelper": false,
+          "dqaHelperText": ""
+        },
+        "minimumPSI": {
+          "value": "13",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "maximumPSI": {
+          "value": "TBD",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "psiNotes": {
+          "value": "<p>10% allowed under minimum psi, counted against the defect's tolerance</p>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        }
+      },
+      "packaging": {
+        "packagingGuidelines": {
+          "value": "<ul><li>Country Of Origin Labeling (COOL) required</li><li>Target 100% PLU coverage</li><li>10% allowed under target plu coverage, counted against the item tolerance</li></ul>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "showDqaHelper": false
+        }
+      },
+      "temperature": {
+        "receivingTemperature": {
+          "value": "<ul><li>Ideal arrival temperature 33° to 38° F</li><li>May occasionally see temperatures as high as 55° F with early new crop</li><li>Temperatures consistently above 55° F, contact Wesco for direction</li></ul>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        }
+      },
+      "quality": {
+        "size": {
+          "value": "<ul><li>Product must be fairly uniform in size.</li><li>Fairly uniform means the size of the fruit within the container does not vary more than ½ inch in diameter from the smallest to largest fruit.</li><li>All Kroger and simple truth organic pouched apples will meet a size requirement<ul><li>Minimum diameter 2 ⅜\"</li></ul></li></ul>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "color": {
+          "value": "<ul><li>Minimum 30% red</li><li>30% good red color, yellow background, no green</li></ul>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        }
+      },
+      "basicSpecifications": {
+        "basicRequirements": {
+          "value": "<p>Not overripe, clean, fairly well shaped</p>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "freeFrom": {
+          "value": "<p>Decay, internal breakdown, internal browning, overripe, visible water core, broken skins, surface mold affecting stems or calyxes</p>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "freeFromDamageOrSeriousDamage": {
+          "value": "<p>Caused by bitter pit, bruises, cuts or other skin breaks, insect stings or feeding, brown surface discoloration, scars, sunburn or sprayburn, invisible water core, other disease, russeting, or other means</p>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "internalAnalysis": {
+          "value": "<ul><li>Cut 3 specimens from each sample case</li><li>If defects are found in those specimens, cut 7 more up to 10 total.</li><li>Invisible watercore may be scored as injury or damage (10% tolerance) when found<ul><li>In the U.S. extra fancy and U.S. fancy grades only</li><li>Only after January 31st of the year following production</li></ul></li></ul>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        }
+      },
+      "preparation": {
+        "wax": {
+          "value": "<ul><li>Target 100% wax coverage</li><li>Fruit must have a smooth wax finish.</li><li>10% allowed under target wax coverage, counted against the item tolerance</li></ul>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "waterCore": {
+          "value": "<ul><li>Maximum 10%</li><li>In the US extra fancy and US fancy grades only</li><li>Only scoreable after January 31st of production year</li></ul>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        }
+      },
+      "storage": {
+        "dwelltime": {
+          "value": "<p>7 days</p>",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "ethylene_producing": {
+          "value": "true",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "ethylene_sensitive": {
+          "value": "true",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "preCoolMinimum": {
+          "value": "33",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "preCoolMinimumAmbient": {
+          "value": "true",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "preCoolMaximum": {
+          "value": "41",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "preCoolMaximumAmbient": {
+          "value": "true",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "storageMinimum": {
+          "value": "38",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "storageMinimumAmbient": {
+          "value": "true",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "storageMaximum": {
+          "value": "38",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        },
+        "storageMaximumAmbient": {
+          "value": "true",
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": ""
+        }
+      }
+    },
+    "tolerance": {
+      "usdaArrivalTolerance": {
+        "damageTolerance": {
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "list": {
+            "damage": {
+              "value": 10,
+              "displayFlag": true,
+              "dqaHelperChecked": false,
+              "dqaHelperText": "",
+              "unitOfMeasure": "Apples"
+            },
+            "seriousDamage": {
+              "value": 5,
+              "displayFlag": true,
+              "dqaHelperChecked": false,
+              "dqaHelperText": "",
+              "unitOfMeasure": "Apples"
+            },
+            "decay": {
+              "value": 1,
+              "displayFlag": true,
+              "dqaHelperChecked": false,
+              "dqaHelperText": "",
+              "unitOfMeasure": "Apples"
+            }
+          }
+        },
+        "qualityTolerance": {
+          "displayFlag": true,
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "list": {
+            "undersized": {
+              "value": "5",
+              "displayFlag": true,
+              "dqaHelperChecked": false,
+              "dqaHelperText": "",
+              "unitOfMeasure": "Apples"
+            },
+            "offCount": {
+              "value": "5",
+              "displayFlag": true,
+              "dqaHelperChecked": false,
+              "dqaHelperText": "",
+              "unitOfMeasure": "Apples"
+            }
+          }
+        }
+      }
+    },
+    "defectScoringGuide": {
+      "displayFlag": true,
+      "dqaHelperChecked": false,
+      "dqaHelperText": "",
+      "list": [
+        {
+          "value": "Bitter pit, jonathan spot",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Free from",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>⅒ of surface</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Broken skins, cuts",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Any healed break",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Any unhealed or healed and >½\" circle</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Brown surface discoloration, delayed sunburn, sunburn, sprayburn, surface scald, etc.",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": ">¼\" circle (agg.)",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>¾\" circle (agg.)</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Bruising",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": ">⅝\" circle (agg.) or >⅛\" deep",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>1 ⅛\" circle (agg.) or >⅜\" of surface</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Discoloration, other (cedar rust, flyspeck, sooty blotch, etc.)",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": ">³⁄₁₆\" to >¼\" circle (agg.)",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>¾\" circle (agg.) up to >⅓ of surface</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Hail and similar depressions",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Skin never broken and surface indentation >⅙\" in depth or surface indentation >⅛\" diameter or aggregate area affected >½\"",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Skin is broken or unhealed. Fruit is deformed or skin broken, but healed and affected area >½\" diameter (agg.)</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Insects, worm damage",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Healed insect stings >⅛\" circle (agg.)",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Any worm hole or healed insect stings >¼\" circle (agg.)</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Internal browning",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Free from",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Free from</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Moldy, decayed stems, calyxes",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Free from (only score against 10% tolerance)",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Mold in the seed cavity",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "More than slight mold",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Seriously detracting</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Overripe",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Free from",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Free from</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Poorly colored",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "See color requirements",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Russeting  Russeting found in the stem cavity or in the calyx basin is not scored as a defect unless it is of the rough or bark-like types. Ignore all other types",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Smooth net-like: >10% of surface, smooth solid: >5% of surface, slightly rough: >½\" diameter, rough: >¼\" diameter",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Smooth net-like: not scored as serious damage, smooth solid: >50% of surface, slightly rough to rough: seriously detracts from appearance</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Scab",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Free from",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>¾\" circle (agg.)</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Scars and limb rubs",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": ">¼\" circle (agg.)",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>10% of surface (agg.)</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Stem punctures, bagged",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": ">1 puncture",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>2 punctures</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Water core, invisible",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Invisible water core from the core to encompassing one vascular bundle or coalesces to encompass 3 or more vascular bundles or found anywhere between the vascular bundle and the outer skin",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Water core, visible",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Free from",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>>½\" circle (agg.)</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>N/A</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        },
+        {
+          "value": "Decay, internal breakdown",
+          "dqaHelperChecked": false,
+          "dqaHelperText": "",
+          "displayFlag": true,
+          "damage": {
+            "displayFlag": true,
+            "value": "Free from",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "seriousDamage": {
+            "displayFlag": true,
+            "value": "<p>Free from</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          },
+          "decay": {
+            "displayFlag": true,
+            "value": "<p>Free from</p>",
+            "dqaHelperChecked": false,
+            "dqaHelperText": ""
+          }
+        }
+      ]
+    }
+  }

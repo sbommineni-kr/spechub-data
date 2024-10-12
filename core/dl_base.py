@@ -69,12 +69,12 @@ class DLBase:
         #based on job_type fetch the job_args
         if self.job_common_args.job_type == 'mongodb':
             dl_log.info(f"Fetching job_args for mongodb")
-            job_yaml_args = self.dl_config['mongodb-jobs'][self.job_args.job_name]
+            job_yaml_args = self.dl_config['mongodb-jobs'][self.job_name]
             return job_yaml_args
         
         elif self.job_common_args.job_type == 'databricks':
             dl_log.info(f"Fetching job_args for databricks")
-            job_yaml_args = self.dl_config['databricks-jobs'][self.job_args.job_name]
+            job_yaml_args = self.dl_config['databricks-jobs'][self.job_name]
             return job_yaml_args
 
 

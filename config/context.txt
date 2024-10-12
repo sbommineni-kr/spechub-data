@@ -1,0 +1,4 @@
+ 1. I am trying to build the logic in job load_convert_all_docs.py that converts all the documents from a input collection to a format that looks like in this sample file apples_60017.json. 
+ 2. During the conversion, make sure you have the root level keys are same as in the sample file.
+ 3. the keys under 'spec', 'tolerance' and 'defectscoringguide' are flattened out in sample file by splitting underscore('_')
+4. analyze the sample file key structure and build the logic in load_convert_all_docs.py
