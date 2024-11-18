@@ -23,6 +23,42 @@ mongodb-jobs:
     arguments:
       start_date: None
       end_date: None
-      
+      collection_name: 'subcommodity_migration'
+  
+  load_release_report:
+    arguments:
+      start_date: None
+      end_date: None
+  
+  load_convert_all_docs:
+    arguments:
+    start_date: None
+    end_date: None
+    collection_name: 'subcommodity_migration'
+  
+  load_spechub_backup_adls:
+    arguments:
+      start_date: None
+      end_date: None
+      storage_connection: 
+      container_name: 'spechubdata-backup'
+      collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa']
+  
+  load_copy_between_envs:
+    arguments:
+      start_date: None
+      end_date: None
+      storage_connection: 
+      container_name: 'spechubdata-backup'
+      collection_names: ['subcommodity_migration']
+  
+  load_check_runtime_errors:
+    arguments:
+      start_date: None
+      end_date: None
+      url: https://sc-fresh-{env}.kroger.biz/spechub/specs/subcommodities/
+      collection_name: 'subcommodity_dqa'
+
+
 
 

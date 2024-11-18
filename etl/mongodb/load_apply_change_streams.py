@@ -5,6 +5,24 @@
 # Date: 2024-09-29
 # Description: This script is used to apply change streams to a MongoDB database on a given input collection. 
 # Execution: python /Users/sudheer.bomminenikroger.com/Desktop/work/git/spechub-data/etl/mongodb/load_apply_change_streams.py -c config/datalake.yaml -a '{"collection_name":"subcommodity_migration"}' -n load_apply_change_streams -v dev
+# nohup setup: 
+'''
+nohup ./run_change_streams_prod.sh > /Users/sudheer.bomminenikroger.com/Desktop/work/prod_output.log 2>&1 &
+nohup ./run_change_streams_uat.sh > /Users/sudheer.bomminenikroger.com/Desktop/work/uat_output.log 2>&1 &
+
+output :
+(myenv312) (base) ➜  bin git:(feature) ✗ nohup ./run_change_streams_prod.sh > /Users/sudheer.bomminenikroger.com/Desktop/work/prod_output.log 2>&1 &
+[1] 5030
+(myenv312) (base) ➜  bin git:(feature) ✗ nohup ./run_change_streams_uat.sh > /Users/sudheer.bomminenikroger.com/Desktop/work/uat_output.log 2>&1 &
+[2] 5168
+(myenv312) (base) ➜  bin git:(feature) ✗ 
+
+use kill to PID if needed
+ps aux | grep run_change_streams_prod.sh
+ps aux | grep run_change_streams_uat.sh
+
+
+'''
 
 from core.dl_etlbase import DLETLBase
 from core.dl_logger import DLLogger
@@ -51,6 +69,15 @@ class LoadApplyChangeStreamsJob(DLETLBase):
                 'operationType': change['operationType'],
                 'timestamp': change['clusterTime']
             }
+
+            # Add more details based on the operation type
+            if change['operationType'] == 'update':
+                changed_document['changeStreamEvent']['updatedFields'] = change.get('updateDescription', {}).get('updatedFields', {})
+                changed_document['changeStreamEvent']['removedFields'] = change.get('updateDescription', {}).get('removedFields', [])
+            elif change['operationType'] == 'replace':
+                changed_document['changeStreamEvent']['fullDocument'] = change.get('fullDocument', {})
+            elif change['operationType'] == 'delete':
+                changed_document['changeStreamEvent']['deletedDocument'] = change.get('fullDocumentBeforeChange', {})
             
             # Generate a unique _id for the change stream document
             changed_document['_id'] = f"{changed_document.get('_id', 'unknown')}_{change['clusterTime'].time}"
@@ -74,7 +101,16 @@ class LoadApplyChangeStreamsJob(DLETLBase):
         # Get the environment and database name from mongo_client
         db_name = self.mongo_database
         env = self.job_common_args.env.lower()
-        collection_name = self.job_additional_args['collection_name']
+        #collection_name = self.job_additional_args['collection_name']
+
+        #get job yaml args 
+        job_yaml_args = self.get_job_yaml_args()
+        collection_name = job_yaml_args['arguments']['collection_name']
+        
+        if 'collection_name' in self.job_additional_args:
+            collection_name = self.job_additional_args['collection_name']
+        else:
+            collection_name = job_yaml_args['arguments']['collection_name']
 
         #apply change streams to the collection
         self.apply_change_streams(db_name, collection_name)

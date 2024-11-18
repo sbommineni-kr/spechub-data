@@ -1,0 +1,915 @@
+{
+  "configVersion": "1.0",
+  "specStructure": {
+    "primaryVariation": {
+      "displayName": "Primary Variation",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "primaryVariation.variationType": "spec",
+        "primaryVariation.variationOptions": "spec"
+      }
+    },
+    "subVariation": {
+      "displayName": "Sub-Variation",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "subVariation.VariationType": "spec"
+      }
+    },
+    "unitOfMeasure": {
+      "displayName": "Unit Of Measure",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "unitOfMeasure.pullUom": "nextLevel",
+        "unitOfMeasure.additionalDescriptor": "spec",
+        "unitOfMeasure.inspectionUom": "nextLevel"
+      },
+      "nextLevel": {
+        "unitOfMeasure.pullUom": {
+          "displayName": "",
+          "groupIcon": "",
+          "position": {
+            "unitOfMeasure.pullUom.pullType": "spec",
+            "unitOfMeasure.pullUom.uomToPull": "spec"
+          }
+        },
+        "unitOfMeasure.inspectionUom": {
+          "displayName": "",
+          "groupIcon": "",
+          "position": {
+            "unitOfMeasure.inspectionUom.inspectionType": "spec",
+            "unitOfMeasure.inspectionUom.uomOfInspection": "spec"
+          }
+        }
+      }
+    },
+    "smartSamples": {
+      "displayName": "Smart Samples",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "smartSamples.positiveTrend": "nextLevel",
+        "smartSamples.negativeTrend": "nextLevel"
+      },
+      "nextLevel": {
+        "smartSamples.positiveTrend": {
+          "displayName": "Positive Trend",
+          "groupIcon": "",
+          "position": {
+            "smartSamples.positiveTrend.inspectionDetailLevel": "spec",
+            "smartSamples.positiveTrend.minimumSampleQuantity": "spec",
+            "smartSamples.positiveTrend.incrementAmount": "spec",
+            "smartSamples.positiveTrend.maximumSampleQuantity": "spec",
+            "smartSamples.positiveTrend.threshold": "spec"
+          }
+        },
+        "smartSamples.negativeTrend": {
+          "displayName": "Negative Trend",
+          "groupIcon": "",
+          "position": {
+            "smartSamples.negativeTrend.inspectionDetailLevel": "spec",
+            "smartSamples.negativeTrend.minimumSampleQuantity": "spec",
+            "smartSamples.negativeTrend.incrementAmount": "spec",
+            "smartSamples.negativeTrend.maximumSampleQuantity": "spec",
+            "smartSamples.negativeTrend.threshold": "spec"
+          }
+        }
+      }
+    },
+    "guidelines": {
+      "displayName": "Guidelines",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "guidelines.productGuidelines": "spec",
+        "guidelines.requiredGrade": "spec"
+      }
+    },
+    "packaging": {
+      "displayName": "Packaging",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "packaging.packagingGuidelines": "spec",
+        "packaging.packageFormat": "spec",
+        "packaging.plu": "spec"
+      }
+    },
+    "temparature": {
+      "displayName": "Temparature",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "temparature.receivingTemperature": "spec"
+      }
+    },
+    "quality": {
+      "displayName": "Quality",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "quality.count": "spec",
+        "quality.size": "spec",
+        "quality.packBunch": "spec",
+        "quality.color": "spec",
+        "quality.weight": "spec",
+        "quality.uniformity": "spec"
+      }
+    },
+    "basicSpecifications": {
+      "displayName": "Basic Specifications",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "basicSpecifications.basicRequirements": "spec",
+        "basicSpecifications.freeFrom": "spec",
+        "basicSpecifications.freeFromDamageOrSeriousDamage": "spec",
+        "basicSpecifications.internalAnalysis": "spec",
+        "basicSpecifications.ripeness": "spec",
+        "basicSpecifications.otherInformation": "spec"
+      }
+    },
+    "preparation": {
+      "displayName": "Preparation",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "preparation.trimming": "spec",
+        "preparation.firmnessTexture": "spec",
+        "preparation.seedSpecfication": "spec",
+        "preparation.wax": "spec",
+        "preparation.waterCore": "spec",
+        "preparation.shatter": "spec"
+      }
+    },
+    "composite": {
+      "displayName": "Composite",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "composite.brix": "spec",
+        "composite.minimumPSI": "spec",
+        "composite.maximumPSI": "spec",
+        "composite.psiNotes": "spec"
+      }
+    },
+    "storage": {
+      "displayName": "Storage",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "storage.ethyleneProducing": "spec",
+        "storage.ethyleneSensitive": "spec",
+        "storage.preCoolMinimum": "spec",
+        "storage.preCoolMinimumAmbient": "spec",
+        "storage.preCoolMaximum": "spec",
+        "storage.preCoolMaximumAmbient": "spec",
+        "storage.storageMinimum": "spec",
+        "storage.storageMinimumAmbient": "spec",
+        "storage.storageMaximum": "spec",
+        "storage.storageMaximumAmbitent": "spec",
+        "storage.dwell": "spec"
+      }
+    },
+    "usdaArrivalTolerance": {
+      "displayName": "USDA Arrival Tolerance",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "usdaArrivalTolerance.qualityTolerances": "tolerance",
+        "usdaArrivalTolerance.damageTolerances": "tolerance"
+      }
+    },
+    "defectScoringGuide": {
+      "displayName": "Defect Scoring Guide",
+      "groupIcon": "image1.jpg",
+      "position": {
+        "defectScoringGuide": "defectGuide"
+      }
+    }
+  },
+  "variations": {
+    "variationAttributes": {
+      "dqaGroupName": "Initial Obesrvations",
+      "dqaMapping": "Basic Details",
+      "secondaryDqaGroupName": "Initial Obesrvations",
+      "secondaryDqaMapping": "Basic Details"
+    }
+  },
+  "spec": {
+    "unitOfMeasure": {
+      "pullUom": {
+        "pullType": {
+          "displayName": "Unit Of Pull Type",
+          "type": "DROPDOWN",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "Sample",
+          "dqaMapping": "",
+          "list": [
+            "Count",
+            "Weight"
+          ]
+        },
+        "uomToPull": {
+          "displayName": "Unit to Pull",
+          "type": "DROPDOWN",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "Sample",
+          "dqaMapping": "Sampled Packages",
+          "list": {
+            "Count": [
+              "Clamshells",
+              "Clusters",
+              "Crates",
+              "Boxes",
+              "Bags",
+              "Bunches",
+              "Apples"
+            ]
+          }
+        }
+      },
+      "additionalDescriptor": {
+        "displayName": "Additional Descriptor",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "inspectionUom": {
+        "inspectionType": {
+          "displayName": "Unit Of Inspection Type",
+          "type": "DROPDOWN",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": "",
+          "list": [
+            "Count",
+            "Weight"
+          ]
+        },
+        "uomOfInspection": {
+          "displayName": "Unit Of Inspection",
+          "type": "DROPDOWN",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "Sample",
+          "dqaMapping": "Sample Quantity",
+          "list": {
+            "Count": [
+              "Berries",
+              "Onions",
+              "Bananas",
+              "Apples"
+            ]
+          }
+        }
+      }
+    },
+    "smartSamples": {
+      "positiveTrend": {
+        "inspectionDetailLevel": {
+          "displayName": "Inspection Detail Level",
+          "type": "SELECTION",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": "",
+          "select": [
+            "Always Full",
+            "Dynamic",
+            "Always Partial"
+          ]
+        },
+        "minimumSampleQuantity": {
+          "displayName": "<p><strong>Minimum Sample Quantity</strong><br />The smallest sample amount allowed</p><p><strong> </strong></p>",
+          "type": "INTEGER",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        },
+        "incrementAmount": {
+          "displayName": "<p><strong>Increment Amount</strong><br />How many more samples to pull</p><p><strong> </strong></p>",
+          "type": "INTEGER",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        },
+        "maximumSampleQuantity": {
+          "displayName": "<p><strong>Maximum Sample Quantity</strong><br />The limit of samples to pull</p><p><strong> </strong></p>",
+          "type": "INTEGER",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        },
+        "threshold": {
+          "displayName": "<p><strong>Thresdhold</strong><br />% of USDA arrival tolerance allowed</p><p><strong> </strong></p>",
+          "type": "FLOAT",
+          "uom": "%",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        }
+      },
+      "negativeTrend": {
+        "inspectionDetailLevel": {
+          "displayName": "Inspection Detail Level",
+          "type": "SELECTION",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": "",
+          "select": [
+            "Always Full",
+            "Dynamic",
+            "Always Partial"
+          ]
+        },
+        "minimumSampleQuantity": {
+          "displayName": "<p><strong>Minimum Sample Quantity</strong><br />The smallest sample amount allowed</p><p><strong> </strong></p>",
+          "type": "INTEGER",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        },
+        "incrementAmount": {
+          "displayName": "<p><strong>Increment Amount</strong><br />How many more samples to pull</p><p><strong> </strong></p>",
+          "type": "INTEGER",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        },
+        "maximumSampleQuantity": {
+          "displayName": "<p><strong>Maximum Sample Quantity</strong><br />The limit of samples to pull</p><p><strong> </strong></p>",
+          "type": "INTEGER",
+          "uom": "",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        },
+        "threshold": {
+          "displayName": "<p><strong>Thresdhold</strong><br />% of USDA arrival tolerance allowed</p><p><strong> </strong></p>",
+          "type": "FLOAT",
+          "uom": "%",
+          "showDqaHelper": false,
+          "dqaGroupName": "",
+          "dqaMapping": ""
+        }
+      }
+    },
+    "guidelines": {
+      "productGuidelines": {
+        "displayName": "Product Guidelines",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "requiredGrade": {
+        "displayName": "Required Grade",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      }
+    },
+    "packaging": {
+      "packagingGuidelines": {
+        "displayName": "Packaging Guidelines",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "packageFormat": {
+        "displayName": "Package Format",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "plu": {
+        "displayName": "PLU",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      }
+    },
+    "quality": {
+      "count": {
+        "displayName": "Count",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "size": {
+        "displayName": "Size",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "packBunch": {
+        "displayName": "Pack/Bunch",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "color": {
+        "displayName": "Color",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "weight": {
+        "displayName": "Weight",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "uniformity": {
+        "displayName": "Uniformity",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      }
+    },
+    "basicSpecifications": {
+      "basicRequirements": {
+        "displayName": "Basic Requirements",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "freeFrom": {
+        "displayName": "Free From",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "freeFromDamageOrSeriousDamage": {
+        "displayName": "Free From Damage Or Serious Damage",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "internalAnalysis": {
+        "displayName": "Internal Analysis",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "Sample",
+        "dqaMapping": "Internal Analysis"
+      },
+      "ripeness": {
+        "displayName": "Ripeness",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "otherInformation": {
+        "displayName": "Other Information",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      }
+    },
+    "preparation": {
+      "trimming": {
+        "displayName": "Trimming",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "firmnessTexture": {
+        "displayName": "Firmness/Texture",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "wax": {
+        "displayName": "Wax",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "waterCore": {
+        "displayName": "Water Core",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "shatter": {
+        "displayName": "Shatter",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "seedSpecification": {
+        "displayName": "Seed Specification",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      }
+    },
+    "composite": {
+      "brix": {
+        "displayName": "Minimum Brix",
+        "type": "STRING",
+        "uom": "ºBx",
+        "showDqaHelper": true,
+        "dqaGroupName": "Other Tests",
+        "dqaMapping": "Brix"
+      },
+      "minimumPSI": {
+        "displayName": "Minimum PSI",
+        "type": "INTEGER",
+        "uom": "PSI",
+        "showDqaHelper": true,
+        "dqaGroupName": "Other Tests",
+        "dqaMapping": "Penetrometer"
+      },
+      "maximumPSI": {
+        "displayName": "Maximum PSI",
+        "type": "INTEGER",
+        "uom": "PSI",
+        "showDqaHelper": true,
+        "dqaGroupName": "Other Tests",
+        "dqaMapping": "Penetrometer"
+      },
+      "psiNotes": {
+        "displayName": "PSI Notes",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": true,
+        "dqaGroupName": "Other Tests",
+        "dqaMapping": "Penetrometer"
+      }
+    },
+    "storage": {
+      "ethyleneProducing": {
+        "displayName": "Ethylene Producing",
+        "type": "boolean",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "ethyleneSensitive": {
+        "displayName": "Ethylene Sensitive",
+        "type": "boolean",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "storageMinimum": {
+        "displayName": "Storage Minimum",
+        "type": "INTEGER",
+        "uom": "F",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "storageMinimumAmbient": {
+        "displayName": "Storage Minimum Ambient",
+        "type": "boolean",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "storageMaximum": {
+        "displayName": "Storage Maximum",
+        "type": "INTEGER",
+        "uom": "F",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "storageMaximumAmbient": {
+        "displayName": "Storage Maximum Ambient",
+        "type": "boolean",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "dwelltime": {
+        "displayName": "Dwell Time",
+        "type": "INTEGER",
+        "uom": "Days",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "preCoolMaximum": {
+        "displayName": "Pre-cool Maximum",
+        "type": "INTEGER",
+        "uom": "F",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "preCoolMaximumAmbient": {
+        "displayName": "Pre-cool Maximum Ambient",
+        "type": "boolean",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "preCoolMinimum": {
+        "displayName": "Pre-cool Minimum",
+        "type": "INTEGER",
+        "uom": "F",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      },
+      "preCoolMinimumAmbient": {
+        "displayName": "Pre-cool Minimum Ambient",
+        "type": "boolean",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      }
+    },
+    "temperature": {
+      "receivingTemperature": {
+        "displayName": "Receiving Temperature",
+        "type": "STRING",
+        "uom": "",
+        "showDqaHelper": false,
+        "dqaGroupName": "",
+        "dqaMapping": ""
+      }
+    }
+  },
+  "tolerance": {
+    "usdaArrivalTolerance": {
+      "qualityTolerance": {
+        "displayName": "Quality Tolerances",
+        "type": "DROPDOWN",
+        "showDqaHelper": true,
+        "uom": "%",
+        "dqaGroupName": "Quality Inspection",
+        "custom": true,
+        "list": {
+          "oversized": {
+            "displayName": "Oversized",
+            "type": "FLOAT",
+            "dqaMapping": "Oversized",
+            "showDqaHelper": false
+          },
+          "undersized": {
+            "displayName": "Undersized",
+            "type": "FLOAT",
+            "dqaMapping": "Undersized",
+            "showDqaHelper": false
+          },
+          "offSize": {
+            "displayName": "Off-Size",
+            "type": "FLOAT",
+            "dqaMapping": "Off-Size",
+            "showDqaHelper": false
+          },
+          "offLength": {
+            "displayName": "Off-Length",
+            "type": "FLOAT",
+            "dqaMapping": "Off-Length",
+            "showDqaHelper": false
+          },
+          "offDiameter": {
+            "displayName": "Off-Diameter",
+            "type": "FLOAT",
+            "dqaMapping": "Off-Diameter",
+            "showDqaHelper": false
+          },
+          "overweight": {
+            "displayName": "Overweight",
+            "type": "FLOAT",
+            "dqaMapping": "Overweight",
+            "showDqaHelper": false
+          },
+          "underweight": {
+            "displayName": "Underweight",
+            "type": "FLOAT",
+            "dqaMapping": "Underweight",
+            "showDqaHelper": false
+          },
+          "offWeight": {
+            "displayName": "Off-Weight",
+            "type": "FLOAT",
+            "dqaMapping": "Off-Weight",
+            "showDqaHelper": false
+          },
+          "offCount": {
+            "displayName": "Off-Count",
+            "type": "FLOAT",
+            "dqaMapping": "Off-Count",
+            "showDqaHelper": false
+          },
+          "offColor": {
+            "displayName": "Off-Color",
+            "type": "FLOAT",
+            "dqaMapping": "Off-Color",
+            "showDqaHelper": false
+          },
+          "poorlyColored": {
+            "displayName": "Poorly Colored",
+            "type": "FLOAT",
+            "dqaMapping": "Poorly Colored",
+            "showDqaHelper": false
+          },
+          "green": {
+            "displayName": "Green",
+            "type": "FLOAT",
+            "dqaMapping": "Green",
+            "showDqaHelper": false
+          },
+          "excessiveSmooth": {
+            "displayName": "Excessive Smooth",
+            "type": "FLOAT",
+            "dqaMapping": "Excessive Smooth",
+            "showDqaHelper": false
+          },
+          "discoloration": {
+            "displayName": "Discoloration",
+            "type": "FLOAT",
+            "dqaMapping": "Discoloration",
+            "showDqaHelper": false
+          },
+          "overripened": {
+            "displayName": "Overripened",
+            "type": "FLOAT",
+            "dqaMapping": "Overripened",
+            "showDqaHelper": false
+          },
+          "underripened": {
+            "displayName": "Underripened",
+            "type": "FLOAT",
+            "dqaMapping": "Underripened",
+            "showDqaHelper": false
+          },
+          "oversizedRoots": {
+            "displayName": "Oversized Roots",
+            "type": "FLOAT",
+            "dqaMapping": "Oversized Roots",
+            "showDqaHelper": false
+          },
+          "oversizedStems": {
+            "displayName": "Oversized Stems",
+            "type": "FLOAT",
+            "dqaMapping": "Oversized Stems",
+            "showDqaHelper": false
+          },
+          "undersizedRoots": {
+            "displayName": "Undersized Roots",
+            "type": "FLOAT",
+            "dqaMapping": "Undersized Roots",
+            "showDqaHelper": false
+          },
+          "undersizedStems": {
+            "displayName": "Undersized Stems",
+            "type": "FLOAT",
+            "dqaMapping": "Undersized Stems",
+            "showDqaHelper": false
+          },
+          "unwaxed": {
+            "displayName": "Unwaxed",
+            "type": "FLOAT",
+            "dqaMapping": "Unwaxed",
+            "showDqaHelper": false
+          },
+          "withWaterCore": {
+            "displayName": "With Water Core",
+            "type": "FLOAT",
+            "dqaMapping": "With Water Core",
+            "showDqaHelper": false
+          },
+          "withTwoOrMoreSeeds": {
+            "displayName": "With 2 Or More Seeds",
+            "type": "FLOAT",
+            "dqaMapping": "With 2 Or More Seeds",
+            "showDqaHelper": false
+          },
+          "shattered": {
+            "displayName": "Shattered",
+            "type": "FLOAT",
+            "dqaMapping": "Shattered",
+            "showDqaHelper": false
+          },
+          "missingPLU": {
+            "displayName": "Missing PLU",
+            "type": "FLOAT",
+            "dqaMapping": "Missing PLU",
+            "showDqaHelper": false
+          }
+        }
+      },
+      "damageTolerance": {
+        "displayName": "Damage Tolerances",
+        "type": "DROPDOWN",
+        "uom": "%",
+        "showDqaHelper": true,
+        "dqaGroupName": "Damage Inspection",
+        "custom": true,
+        "list": {
+          "damage": {
+            "displayName": "Damage",
+            "type": "INTEGER",
+            "dqaMapping": "Damaged"
+          },
+          "seriousDamage": {
+            "displayName": "Serious Damage",
+            "type": "INTEGER",
+            "dqaMapping": "Seriously Damaged"
+          },
+          "verySeriousDamage": {
+            "displayName": "Very Serious Damage",
+            "type": "INTEGER",
+            "dqaMapping": "Very Seriously Damaged"
+          },
+          "decay": {
+            "displayName": "Decay",
+            "type": "INTEGER",
+            "dqaMapping": "Decayed"
+          }
+        }
+      }
+    }
+  },
+  "defectScoringGuide": {
+    "type": "STRING",
+    "showDqaHelper": true,
+    "dqaGroupName": "Damage Observed",
+    "dqaMapping": "value",
+    "custom": true,
+    "list": {
+      "damage": {
+        "type": "STRING",
+        "displayName": "Damage",
+        "showDqaHelper": false,
+        "dqaMapping": "Damage"
+      },
+      "seriousDamage": {
+        "type": "STRING",
+        "displayName": "Serious Damage",
+        "showDqaHelper": false,
+        "dqaMapping": "Serious Damage"
+      },
+      "verySeriousDamage": {
+        "type": "STRING",
+        "displayName": "Very Serious Damage",
+        "showDqaHelper": false,
+        "dqaMapping": "Very Serious Damage"
+      },
+      "decay": {
+        "type": "STRING",
+        "displayName": "Decay",
+        "showDqaHelper": false,
+        "dqaMapping": "Decay"
+      }
+    }
+  }
+}

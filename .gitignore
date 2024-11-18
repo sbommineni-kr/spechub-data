@@ -77,3 +77,6 @@ target/
 *.bak
 *.tmp
 *.temp
+
+#Ignore files under data that ends with .json#
+data/*.json
