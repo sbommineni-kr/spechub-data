@@ -35,6 +35,21 @@ mongodb-jobs:
     start_date: None
     end_date: None
     collection_name: 'subcommodity_migration'
+  
+  load_copy_prod_data:
+    arguments:
+      start_date: None
+      end_date: None
+      storage_connection: 
+      container_name: 'spechubdata-backup'
+      collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa']
+  
+  load_check_runtime_errors:
+    arguments:
+      start_date: None
+      end_date: None
+      url: https://sc-fresh-{env}.kroger.biz/spechub/specs/subcommodities/
+      collection_name: 'subcommodity_dqa'
 
 
 
