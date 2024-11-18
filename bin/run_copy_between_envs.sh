@@ -5,8 +5,7 @@
 source_env=""
 target_env=""
 storage_connection=""
-# Set common logging prefix
-SCRIPT_NAME="[$(basename $0)]"
+SCRIPT_NAME="[$(date '+%Y-%m-%d %H:%M:%S')] [$(basename $0)]"
 
 # Parse command line arguments
 while getopts "s:f:t:" opt; do

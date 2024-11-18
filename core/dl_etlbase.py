@@ -22,6 +22,7 @@ class DLETLBase(DLBase):
             #set deafult value for env
             env = None
             env = self.job_common_args.env.lower() if self.job_common_args.env is not None else env
+            self.env = env
             
             if env in ['dev', 'test', 'uat', 'prod']:
                 dl_log.info(f"Given env variable is {env} .. returning specific environment mongo clients..")
