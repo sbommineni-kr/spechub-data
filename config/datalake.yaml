@@ -36,7 +36,7 @@ mongodb-jobs:
     end_date: None
     collection_name: 'subcommodity_migration'
   
-  load_copy_prod_data:
+  load_spechub_backup_adls:
     arguments:
       start_date: None
       end_date: None
