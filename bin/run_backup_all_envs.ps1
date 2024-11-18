@@ -13,6 +13,9 @@ param(
 )
 
 $environments = @("dev", "test", "uat", "prod")
+$timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+$scriptName = $MyInvocation.MyCommand.Name
+
 # Check if environment argument is provided
 if ($Environment) {
     # Check if provided environment is valid
@@ -20,14 +23,14 @@ if ($Environment) {
         $environments = @($Environment)
     }
     else {
-        Write-Host "Error: Invalid environment. Allowed values are: $($environments -join ' ')"
+        Write-Host "$timestamp $scriptName : Error: Invalid environment. Allowed values are: $($environments -join ' ')"
         exit 1
     }
 }
 
 foreach ($env in $environments) {
-    Write-Host "$($MyInvocation.MyCommand.Name): Running backup for environment: $env"
-    Write-Host "$($MyInvocation.MyCommand.Name): Directory: $PSScriptRoot"
+    Write-Host "$timestamp $scriptName : Running backup for environment: $env"
+    Write-Host "$timestamp $scriptName : Directory: $PSScriptRoot"
     
     $result = python "$PSScriptRoot/../etl/mongodb/load_spechub_backup_adls.py" `
         -c "$PSScriptRoot/../config/datalake.yaml" `
@@ -37,9 +40,9 @@ foreach ($env in $environments) {
         -v $env
 
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "$($MyInvocation.MyCommand.Name): Successfully completed backup for environment: $env"
+        Write-Host "$timestamp $scriptName : Successfully completed backup for environment: $env"
     } else {
-        Write-Host "$($MyInvocation.MyCommand.Name): Failed to complete backup for environment: $env" -ForegroundColor Red
+        Write-Host "$timestamp $scriptName : Failed to complete backup for environment: $env" -ForegroundColor Red
         exit $LASTEXITCODE
     }
 }

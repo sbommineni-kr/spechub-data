@@ -11,9 +11,7 @@ param(
     [string]$target_env
 )
 
-# Set common logging prefix
-$SCRIPT_NAME = "[$(Split-Path $MyInvocation.MyCommand.Path -Leaf)]"
-
+$SCRIPT_NAME = "[$((Get-Date).ToString('yyyy-MM-dd HH:mm:ss'))] [$(Split-Path $MyInvocation.MyCommand.Path -Leaf)]"
 # Validate environments
 $valid_environments = @("dev", "test", "uat", "prod")
 if (-not ($valid_environments -contains $source_env) -or -not ($valid_environments -contains $target_env)) {

@@ -5,8 +5,7 @@ environments=("dev" "test" "uat" "prod")
 storage_connection=""
 env_arg=""
 
-SCRIPT_NAME="[$(basename $0)]"
-
+SCRIPT_NAME="[$(date '+%Y-%m-%d %H:%M:%S')] [$(basename $0)]"
 # Parse command line arguments
 while getopts "s:e:" opt; do
     case $opt in

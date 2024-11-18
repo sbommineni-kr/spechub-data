@@ -50,7 +50,7 @@ mongodb-jobs:
       end_date: None
       storage_connection: 
       container_name: 'spechubdata-backup'
-      collection_names: ['subcommodity_migration']
+      collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa']
   
   load_check_runtime_errors:
     arguments:
