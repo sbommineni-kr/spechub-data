@@ -36,7 +36,7 @@ class DLBase:
         parser.add_argument('-n', '--job_name', type=str, help='Name of the job you want to run to (e.g., load_all_collections_backup)', required=True)
         parser.add_argument('-j', '--job_type', type=str, help='Name of the job_type you want to connect to (e.g., "mongodb", "databricks", "snowflake")', default='mongodb', required=False)
         parser.add_argument('-a', '--additional_args', type=json.loads, help='Additional arguments for the job in the form of dictionary', default=None, required=False)
-        parser.add_argument('-v', '--env', type=str, help='environment', default='DEV', required=False)
+        parser.add_argument('-v', '--env', type=str, help='environment', default=None, required=False)
         common_args = parser.parse_args()
         
         #print all common args 

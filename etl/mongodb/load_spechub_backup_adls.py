@@ -18,7 +18,7 @@ from pymongo.errors import OperationFailure
 from core.dl_adls import DLAzureDataLake
 
 
-class LoadCopyProdDataJob(DLETLBase):
+class BackupSpecHubData(DLETLBase):
     def __init__(self):
         super().__init__()
     
@@ -106,7 +106,7 @@ class LoadCopyProdDataJob(DLETLBase):
         
 
 if __name__ == '__main__':
-    job = LoadCopyProdDataJob()
+    job = BackupSpecHubData()
     dl_log = DLLogger(job.job_name)
     
     #fecth args 

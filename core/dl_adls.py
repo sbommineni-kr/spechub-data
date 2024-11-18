@@ -11,6 +11,7 @@ from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 import io
 import os
 import pandas as pd
+from pandas import DataFrame
 from .dl_logger import DLLogger
 
 dl_log = DLLogger(__name__)

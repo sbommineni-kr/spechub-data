@@ -13,7 +13,6 @@ param(
 )
 
 $environments = @("dev", "test", "uat", "prod")
-
 # Check if environment argument is provided
 if ($Environment) {
     # Check if provided environment is valid
@@ -27,15 +26,20 @@ if ($Environment) {
 }
 
 foreach ($env in $environments) {
-    Write-Host "Running backup for environment: $env"
-    Write-Host "Directory: $PSScriptRoot"
+    Write-Host "$($MyInvocation.MyCommand.Name): Running backup for environment: $env"
+    Write-Host "$($MyInvocation.MyCommand.Name): Directory: $PSScriptRoot"
     
-    python "$PSScriptRoot/../etl/mongodb/load_spechub_backup_adls.py" `
+    $result = python "$PSScriptRoot/../etl/mongodb/load_spechub_backup_adls.py" `
         -c "$PSScriptRoot/../config/datalake.yaml" `
         -j "mongodb" `
         -n "load_spechub_backup_adls" `
         -a "{`"storage_connection`":`"$StorageConnection`"}" `
         -v $env
-        
-    Write-Host "Completed backup for environment: $env"
+
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "$($MyInvocation.MyCommand.Name): Successfully completed backup for environment: $env"
+    } else {
+        Write-Host "$($MyInvocation.MyCommand.Name): Failed to complete backup for environment: $env" -ForegroundColor Red
+        exit $LASTEXITCODE
+    }
 }
