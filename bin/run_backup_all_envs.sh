@@ -43,11 +43,15 @@ for env in "${environments[@]}"
 do
     echo "$SCRIPT_NAME Running backup for environment: $env"
     echo "$SCRIPT_NAME Directory: $(dirname $0)"
-    python $(dirname $0)/../etl/mongodb/load_spechub_backup_adls.py \
+    if python $(dirname $0)/../etl/mongodb/load_spechub_backup_adls.py \
         -c $(dirname $0)/../config/datalake.yaml \
         -j mongodb \
         -n load_spechub_backup_adls \
         -a "{\"storage_connection\":\"$storage_connection\"}" \
-        -v "$env"
-    echo "$SCRIPT_NAME Completed backup for environment: $env"
+        -v "$env"; then
+        echo "$SCRIPT_NAME Successfully completed backup for environment: $env"
+    else
+        echo "$SCRIPT_NAME Error: Backup failed for environment: $env"
+        exit 1
+    fi
 done
