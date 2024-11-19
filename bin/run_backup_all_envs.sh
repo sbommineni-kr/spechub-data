@@ -1,6 +1,8 @@
 #!/bin/bash
 #execution command for all environments: sh run_backup_all_envs.sh -s <storage_connection>
 #execution command for a specific environment: sh run_backup_all_envs.sh -s <storage_connection> -e dev
+
+#cronjob is setup .. , execute crontab -l to see the cronjob , scheduled to run at 4:00 PM CST daily
 environments=("dev" "test" "uat" "prod")
 storage_connection=""
 env_arg=""
