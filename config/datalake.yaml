@@ -42,7 +42,7 @@ mongodb-jobs:
       end_date: None
       storage_connection: 
       container_name: 'spechubdata-backup'
-      collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa']
+      collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa', 'subcommodity_icon', 'dqahelp_subcommodity']
   
   load_copy_between_envs:
     arguments:
@@ -50,7 +50,7 @@ mongodb-jobs:
       end_date: None
       storage_connection: 
       container_name: 'spechubdata-backup'
-      collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa']
+      collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa', 'subcommodity_icon', 'dqahelp_subcommodity']
   
   load_check_runtime_errors:
     arguments:

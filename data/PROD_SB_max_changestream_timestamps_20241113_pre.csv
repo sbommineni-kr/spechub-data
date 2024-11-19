@@ -1,0 +1,10 @@
+collection,max_timestamp,utc_timestamp,subCommodityCode,subCommodityName,database_name,variations,object_id,changeStreamEvent
+subcommodity_migration_changestream,1729101782,2024-10-16 13:03:02,60606,SBT TROPICAL,PROD_SB,,670fffd6abb8747e371549ef_1729101782,"{'operationType': 'insert', 'timestamp': Timestamp(1729101782, 2)}"
+subcommodity_migration_changestream,1729021671,2024-10-15 14:47:51,59802,ARTICHOKES,PROD_SB,,66c4f73e18aad9dd5acaf840_1729021671,"{'operationType': 'update', 'timestamp': Timestamp(1729021671, 2), 'updatedFields': {'subCommodityIcon': 'Uncategorized'}, 'removedFields': []}"
+subcommodity_migration_changestream,1729101624,2024-10-16 13:00:24,60406,SBT Berries,PROD_SB,,670fff38abb8747e371549ee_1729101624,"{'operationType': 'insert', 'timestamp': Timestamp(1729101624, 4)}"
+subcommodity_migration_changestream,1729108357,2024-10-16 14:52:37,59303,HERBS SQUEEZE TUBE ORGANIC,PROD_SB,,67101985abb8747e371549f1_1729108357,"{'operationType': 'insert', 'timestamp': Timestamp(1729108357, 24)}"
+subcommodity_migration_changestream,1729100166,2024-10-16 12:36:06,60217,SBT CITRUS,PROD_SB,,670ff986abb8747e371549eb_1729100166,"{'operationType': 'insert', 'timestamp': Timestamp(1729100166, 2)}"
+subcommodity_migration_changestream,1729101871,2024-10-16 13:04:31,60705,SBT MELONS,PROD_SB,,6710002fabb8747e371549f0_1729101871,"{'operationType': 'insert', 'timestamp': Timestamp(1729101871, 20)}"
+subcommodity_migration_changestream,1729101292,2024-10-16 12:54:52,60305,SBT GRAPES,PROD_SB,,670ffdecabb8747e371549ec_1729101292,"{'operationType': 'insert', 'timestamp': Timestamp(1729101292, 2)}"
+subcommodity_migration_changestream,1729101366,2024-10-16 12:56:06,98671,GRAPES WINE,PROD_SB,,670ffe36abb8747e371549ed_1729101366,"{'operationType': 'insert', 'timestamp': Timestamp(1729101366, 2)}"
+subcommodity_migration_changestream,1729105875,2024-10-16 14:11:15,,,PROD_SB,,66c4f73e18aad9dd5acafb04_1729103931,"{'operationType': 'delete', 'timestamp': Timestamp(1729103931, 112), 'deletedDocument': {}}"
