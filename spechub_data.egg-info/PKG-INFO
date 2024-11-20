@@ -27,3 +27,6 @@ This project contains the data services for the SpecHub application.
 3. conda activate myenv312
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run setup: `python setup.py install`
+
+## adhoc execution of crom jobs
+for job in $(crontab -l | grep -v '^#'); do eval "$job"; done

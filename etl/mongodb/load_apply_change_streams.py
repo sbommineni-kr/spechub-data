@@ -39,64 +39,93 @@ class LoadApplyChangeStreamsJob(DLETLBase):
         self.mongo_client = self.mongo.mongo_client
     
     def apply_change_streams(self, db_name, collection_name):
-        # Connect to the database
         db = self.mongo_client[db_name]
-        # Get the source collection
-        source_collection = db[collection_name]
-        # Get the target collection name
-        target_collection_name = collection_name + '_changestream'
         
-        # Create collection if it doesn't exist
-        target_collection = self.mongo.create_collection(target_collection_name)
-
-        # Get the change stream
-        change_stream = source_collection.watch(full_document='updateLookup')
+        # Convert single collection name to list for consistent processing
+        collection_names = [collection_name] if isinstance(collection_name, str) else collection_name
         
-        # Iterate over the change stream
-        for change in change_stream:
-            # Extract the changed document
-            if change['operationType'] in ['insert', 'update', 'replace']:
-                changed_document = change.get('fullDocument', {})
-            elif change['operationType'] == 'delete':
-                changed_document = change['documentKey']
-            elif change['operationType'] in ['drop', 'dropDatabase', 'rename', 'invalidate']:
-                changed_document = change
+        # Create target collections for change streams if they don't exist
+        target_collections = {}
+        for coll_name in collection_names:
+            change_stream_collection = f"{coll_name}_changestream"
+            if change_stream_collection not in db.list_collection_names():
+                dl_logger.info(f"Creating collection: {change_stream_collection}")
+                db.create_collection(change_stream_collection)
             else:
-                continue  # Skip other operation types
-            
-            # Add metadata about the change
-            changed_document['changeStreamEvent'] = {
-                'operationType': change['operationType'],
-                'timestamp': change['clusterTime']
-            }
-
-            # Add more details based on the operation type
-            if change['operationType'] == 'update':
-                changed_document['changeStreamEvent']['updatedFields'] = change.get('updateDescription', {}).get('updatedFields', {})
-                changed_document['changeStreamEvent']['removedFields'] = change.get('updateDescription', {}).get('removedFields', [])
-            elif change['operationType'] == 'replace':
-                changed_document['changeStreamEvent']['fullDocument'] = change.get('fullDocument', {})
-            elif change['operationType'] == 'delete':
-                changed_document['changeStreamEvent']['deletedDocument'] = change.get('fullDocumentBeforeChange', {})
-            
-            # Generate a unique _id for the change stream document
-            changed_document['_id'] = f"{changed_document.get('_id', 'unknown')}_{change['clusterTime'].time}"
-            
-            # Insert the changed document into the target collection
-            try:
-                target_collection.insert_one(changed_document)
-            except pymongo.errors.DuplicateKeyError:
-                # If a duplicate key error occurs, update the existing document
-                target_collection.replace_one(
-                    {'_id': changed_document['_id']},
-                    changed_document,
-                    upsert=True
-                )
-            except Exception as e:
-                # Log any other errors
-                self.logger.error(f"Error processing change stream: {str(e)}")
-        
+                dl_logger.info(f"Collection {change_stream_collection} already exists.")
+            target_collections[str(coll_name)] = db[change_stream_collection]
     
+        pipeline = [
+            {'$match': {'ns.coll': {'$in': collection_names}}},
+            {'$addFields': {
+                'clientInfo': {
+                    'ip': {
+                        '$ifNull': [
+                            '$clientConnectionAddress.ip',
+                            '$client.host'
+                        ]
+                    }
+                }
+            }}
+        ]
+
+        change_stream = db.watch(
+            pipeline,
+            full_document='updateLookup',
+            full_document_before_change='whenAvailable'
+        )
+    
+        dl_logger.info(f"Started watching collections: {collection_names}")
+    
+        try:
+            while True:
+                for change in change_stream:
+                    dl_logger.debug(f"Change event received: {change['operationType']}")
+                    #dl_logger.info(f"change object is : {change}")
+                
+                    changed_document = {
+                        'documentBefore': change.get('fullDocumentBeforeChange'),
+                        'documentAfter': change.get('fullDocument'),
+                        'changeStreamEvent': {
+                            'operationType': change['operationType'],
+                            'timestamp': change['clusterTime'],
+                            'readableTimestamp': change['clusterTime'].as_datetime().strftime('%Y-%m-%d %H:%M:%S UTC'),
+                            'documentKey': change['documentKey'],
+                            'clientInfo': change.get('clientInfo', {'ip': 'unknown'}),
+                            'updateDescription': change.get('updateDescription', {})
+                        }
+                    }
+                
+                    source_collection_name = change['ns']['coll']
+                    target_collection = target_collections[str(source_collection_name)]
+
+                    # Generate unique ID including milliseconds for better granularity
+                    changed_document['_id'] = f"{source_collection_name}_{change['documentKey'].get('_id', 'unknown')}_{change['clusterTime'].time}"
+
+                    try:
+                        result = target_collection.insert_one(changed_document)
+                        dl_logger.info(f"Inserted document with _id: {result.inserted_id}")
+                        dl_logger.info(f"Captured change in {source_collection_name}: {change['operationType']} - SubCommodityCode: {change.get('fullDocument', {}).get('subCommodityCode') or change.get('fullDocumentBeforeChange', {}).get('subCommodityCode', 'N/A')}")
+                    except pymongo.errors.DuplicateKeyError:
+                        result = target_collection.replace_one(
+                            {'_id': changed_document['_id']},
+                            changed_document,
+                            upsert=True
+                        )
+                        dl_logger.info(f"Updated document with _id: {changed_document['_id']}")
+                    except Exception as e:
+                        dl_logger.error(f"Error processing change stream: {str(e)}")
+                        dl_logger.error(f"Failed document: {changed_document}")
+                    
+        except pymongo.errors.PyMongoError as e:
+            dl_logger.error(f"MongoDB error: {str(e)}")
+            # Resume the change stream
+            change_stream = db.watch(
+                pipeline,
+                full_document='updateLookup',
+                full_document_before_change='whenAvailable',
+                resume_after=change_stream.resume_token
+            )    
     def run(self):
         # Get the environment and database name from mongo_client
         db_name = self.mongo_database

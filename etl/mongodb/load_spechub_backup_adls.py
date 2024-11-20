@@ -7,6 +7,10 @@
 # Description: This script is used to copy data from prod to non-prod MongoDB database.
 # Exection : python /Users/sudheer.bomminenikroger.com/Desktop/work/git/spechub-data/etl/mongodb/load_spechub_backup_adls.py -c config/datalake.yaml -j mongodb -n load_spechub_backup_adls -a '{"storage_connection":""}' -v prod
 
+#chmod +x /Users/sudheer.bomminenikroger.com/Desktop/work/git/spechub-data/bin/run_backup_all_envs.sh
+#export PYTHONPATH="/Users/sudheer.bomminenikroger.com/Desktop/work/git/spechub-data:$PYTHONPATH"
+
+
 from core.dl_etlbase import DLETLBase
 from core.dl_logger import DLLogger
 import os 

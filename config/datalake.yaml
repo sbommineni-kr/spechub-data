@@ -23,7 +23,7 @@ mongodb-jobs:
     arguments:
       start_date: None
       end_date: None
-      collection_name: 'subcommodity_migration'
+      collection_name: ['subcommodity_dqa', 'specconfig_dqa', 'subcommodity_icon', 'dqahelp_subcommodity']
   
   load_release_report:
     arguments:

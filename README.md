@@ -15,3 +15,9 @@ This project contains the data services for the SpecHub application.
 3. conda activate myenv312
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run setup: `python setup.py install`
+
+## adhoc execution of crom jobs
+source ~/opt/anaconda3/etc/profile.d/conda.sh && conda activate myenv312 && crontab -l | grep -v '^#' | cut -f 6- -d ' ' | while IFS= read -r cmd; do (eval "${cmd#* && }" &); done
+
+## Kill all changestream 
+pkill -f run_change_streams
