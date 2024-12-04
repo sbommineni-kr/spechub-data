@@ -38,6 +38,33 @@ class LoadApplyChangeStreamsJob(DLETLBase):
         #get mongo_client from dl_etlbase
         self.mongo_client = self.mongo.mongo_client
     
+    def check_and_enable_pre_images(self, db_name, collection_name):
+        """
+        Check if pre-image recording is enabled for a collection and enable it if not.
+        """
+        db = self.mongo_client[db_name]
+        try:
+            # Check collection options for pre-image settings
+            collection_info = db.command("listCollections", filter={"name": collection_name})
+            options = collection_info.get("cursor", {}).get("firstBatch", [])[0].get("options", {})
+            
+            pre_image_settings = options.get("changeStreamPreAndPostImages", {})
+            if pre_image_settings.get("enabled", False):
+                dl_logger.info(f"Pre-image recording is already enabled for collection '{collection_name}' in database '{db_name}'.")
+                return True
+            
+            # Enable pre-image recording
+            dl_logger.info(f"Enabling pre-image recording for collection '{collection_name}' in database '{db_name}'.")
+            db.command({
+                "collMod": collection_name,
+                "changeStreamPreAndPostImages": {"enabled": True}
+            })
+            dl_logger.info(f"Pre-image recording enabled for collection '{collection_name}' in database '{db_name}'.")
+            return True
+        except Exception as e:
+            dl_logger.info(f"Error checking or enabling pre-images for collection '{collection_name}': {e}")
+            return False
+    
     def apply_change_streams(self, db_name, collection_name):
         db = self.mongo_client[db_name]
         
@@ -47,6 +74,10 @@ class LoadApplyChangeStreamsJob(DLETLBase):
         # Create target collections for change streams if they don't exist
         target_collections = {}
         for coll_name in collection_names:
+
+            # Check and enable pre-images if required
+            self.check_and_enable_pre_images(db_name, coll_name)
+
             change_stream_collection = f"{coll_name}_changestream"
             if change_stream_collection not in db.list_collection_names():
                 dl_logger.info(f"Creating collection: {change_stream_collection}")
@@ -81,7 +112,7 @@ class LoadApplyChangeStreamsJob(DLETLBase):
             while True:
                 for change in change_stream:
                     dl_logger.debug(f"Change event received: {change['operationType']}")
-                    #dl_logger.info(f"change object is : {change}")
+                    dl_logger.debug(f"change object is : {change}")
                 
                     changed_document = {
                         'documentBefore': change.get('fullDocumentBeforeChange'),
@@ -126,6 +157,8 @@ class LoadApplyChangeStreamsJob(DLETLBase):
                 full_document_before_change='whenAvailable',
                 resume_after=change_stream.resume_token
             )    
+    
+    
     def run(self):
         # Get the environment and database name from mongo_client
         db_name = self.mongo_database

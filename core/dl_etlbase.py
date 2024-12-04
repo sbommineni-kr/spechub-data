@@ -9,20 +9,23 @@
 from .dl_base import DLBase
 from .dl_logger import DLLogger
 from .dl_mongo import DLMongo
+#from .dl_adls import DLAzureDataLake
 
 dl_log = DLLogger(__name__)
 
 class DLETLBase(DLBase):
-    def __init__(self, start_date=None, end_date=None, job_name=None, job_type=None):
+    def __init__(self, start_date=None, end_date=None, job_name=None, job_type=None, connection_string=None, container_name=None):
         
         super().__init__(start_date, end_date, job_name, job_type)
 
+        #set deafult value for env
+        env = None
+        env = self.job_common_args.env.lower() if self.job_common_args.env is not None else env
+        self.env = env
+
         if self.job_type == 'mongodb':
+            
             # Initialize MongoDB connection
-            #set deafult value for env
-            env = None
-            env = self.job_common_args.env.lower() if self.job_common_args.env is not None else env
-            self.env = env
             
             if env in ['dev', 'test', 'uat', 'prod']:
                 dl_log.info(f"Given env variable is {env} .. returning specific environment mongo clients..")
@@ -48,6 +51,11 @@ class DLETLBase(DLBase):
                     self.mongo_database[env] = database
             else:
                 raise ValueError(f"Invalid Environment argument: {env}")
+        
+        """ elif self.job_type == 'adls':
+            # Initialize Azure Data Lake connection
+            self.dl_adls = DLAzureDataLake(connection_string, container_name) """
+            
 
 
                 

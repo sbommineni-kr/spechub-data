@@ -1,0 +1,195 @@
+subCommodityCode,path,start_date_value,end_date_value
+98046,root[0].lastUpdatedUser,exists,missing
+98046,root[0].lastUpdatedUTCTimestamp,exists,missing
+98046,root[0].disableDQA,None,False
+98046,root[0].subCommodityIcon,Uncategorized,Kiwi
+98046,root[0].spec.guidelines.productGuidelines.dqaHelperText,exists,missing
+98046,root[0].spec.guidelines.productGuidelines.showDqaHelper,missing,exists
+98046,root[0].spec.guidelines.requiredGrade.dqaHelperText,exists,missing
+98046,root[0].spec.guidelines.requiredGrade.showDqaHelper,missing,exists
+98046,root[0].spec.basicSpecifications.basicRequirements.dqaHelperText,exists,missing
+98046,root[0].spec.basicSpecifications.basicRequirements.showDqaHelper,missing,exists
+98046,root[0].spec.basicSpecifications.freeFrom.dqaHelperText,exists,missing
+98046,root[0].spec.basicSpecifications.freeFrom.showDqaHelper,missing,exists
+98046,root[0].spec.basicSpecifications.freeFromDamageOrSeriousDamage.dqaHelperText,exists,missing
+98046,root[0].spec.basicSpecifications.freeFromDamageOrSeriousDamage.showDqaHelper,missing,exists
+98046,root[0].spec.basicSpecifications.ripeness.dqaHelperText,exists,missing
+98046,root[0].spec.basicSpecifications.ripeness.showDqaHelper,missing,exists
+98046,root[0].spec.basicSpecifications.internalAnalysis.dqaHelperText,exists,missing
+98046,root[0].spec.basicSpecifications.internalAnalysis.showDqaHelper,missing,exists
+98046,root[0].spec.quality.size.dqaHelperText,exists,missing
+98046,root[0].spec.quality.size.showDqaHelper,missing,exists
+98046,root[0].spec.quality.count.dqaHelperText,exists,missing
+98046,root[0].spec.quality.count.showDqaHelper,missing,exists
+98046,root[0].spec.temperature.receivingTemperature.dqaHelperText,exists,missing
+98046,root[0].spec.temperature.receivingTemperature.showDqaHelper,missing,exists
+98046,root[0].spec.packaging.packagingGuidelines.dqaHelperText,exists,missing
+98046,root[0].spec.packaging.packagingGuidelines.showDqaHelper,missing,exists
+98046,root[0].spec.storage.dwelltime.dqaHelperText,exists,missing
+98046,root[0].spec.storage.dwelltime.showDqaHelper,missing,exists
+98046,root[0].spec.storage.ethylene,exists,missing
+98046,root[0].spec.storage.preCoolMinimum.dqaHelperText,exists,missing
+98046,root[0].spec.storage.preCoolMinimum.showDqaHelper,missing,exists
+98046,root[0].spec.storage.preCoolMinimumAmbient.dqaHelperText,exists,missing
+98046,root[0].spec.storage.preCoolMinimumAmbient.showDqaHelper,missing,exists
+98046,root[0].spec.storage.preCoolMaximum.dqaHelperText,exists,missing
+98046,root[0].spec.storage.preCoolMaximum.showDqaHelper,missing,exists
+98046,root[0].spec.storage.preCoolMaximumAmbient.dqaHelperText,exists,missing
+98046,root[0].spec.storage.preCoolMaximumAmbient.showDqaHelper,missing,exists
+98046,root[0].spec.storage.storageMinimum.dqaHelperText,exists,missing
+98046,root[0].spec.storage.storageMinimum.showDqaHelper,missing,exists
+98046,root[0].spec.storage.storageMinimumAmbient.dqaHelperText,exists,missing
+98046,root[0].spec.storage.storageMinimumAmbient.showDqaHelper,missing,exists
+98046,root[0].spec.storage.storageMaximum.dqaHelperText,exists,missing
+98046,root[0].spec.storage.storageMaximum.showDqaHelper,missing,exists
+98046,root[0].spec.storage.storageMaximumAmbient.dqaHelperText,exists,missing
+98046,root[0].spec.storage.storageMaximumAmbient.showDqaHelper,missing,exists
+98046,root[0].spec.storage.ethyleneSensitive,missing,exists
+98046,root[0].spec.storage.ethyleneProducing,missing,exists
+98046,root[0].spec.unitOfMeasure.pullUom.pullType.showDqaHelper,missing,exists
+98046,root[0].spec.unitOfMeasure.pullUom.uomToPull.showDqaHelper,missing,exists
+98046,root[0].spec.unitOfMeasure.additionalDescriptor.showDqaHelper,missing,exists
+98046,root[0].spec.unitOfMeasure.inspectionUom.inspectionType.showDqaHelper,missing,exists
+98046,root[0].spec.unitOfMeasure.inspectionUom.uomOfInspection.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.positiveTrend.inspectionDetailLevel.value,,Dynamic
+98046,root[0].spec.smartSamples.positiveTrend.inspectionDetailLevel.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.positiveTrend.minimumSampleQuantity.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.positiveTrend.incrementAmount.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.positiveTrend.maximumSampleQuantity.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.positiveTrend.threshold.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.negativeTrend.inspectionDetailLevel.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.negativeTrend.minimumSampleQuantity.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.negativeTrend.incrementAmount.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.negativeTrend.maximumSampleQuantity.showDqaHelper,missing,exists
+98046,root[0].spec.smartSamples.negativeTrend.threshold.showDqaHelper,missing,exists
+98046,root[0].tolerance.usdaArrivalTolerance.damageTolerance.list.damage.unitOfMeasure,exists,missing
+98046,root[0].tolerance.usdaArrivalTolerance.damageTolerance.list.damage.passOrFailCheckBox,exists,missing
+98046,root[0].tolerance.usdaArrivalTolerance.damageTolerance.list.seriousDamage.unitOfMeasure,exists,missing
+98046,root[0].tolerance.usdaArrivalTolerance.damageTolerance.list.seriousDamage.passOrFailCheckBox,exists,missing
+98046,root[0].tolerance.usdaArrivalTolerance.damageTolerance.list.decay.unitOfMeasure,exists,missing
+98046,root[0].tolerance.usdaArrivalTolerance.damageTolerance.list.decay.passOrFailCheckBox,exists,missing
+98046,root[0].tolerance.usdaArrivalTolerance.qualityTolerance.list.offSize.unitOfMeasure,exists,missing
+98046,root[0].tolerance.usdaArrivalTolerance.qualityTolerance.list.offSize.passOrFailCheckBox,exists,missing
+98046,root[0].defectScoringGuide.list[0].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[0].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[0].damage.value,Fruit surface indented and discoloration of flesh >1/8" deep or slight discoloration >3/8" circle agg., or which materially detracts,<p>Fruit surface indented and discoloration of flesh &gt;1/8" deep or slight discoloration &gt;3/8" circle agg., or which materially detracts</p>
+98046,root[0].defectScoringGuide.list[0].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[0].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[0].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[0].seriousDamage.value,Fruit surface indented and discoloration of flesh >1/4" deep or slight discoloration >1/2" circle agg., or which seriously detracts,<p>Fruit surface indented and discoloration of flesh &gt;1/4" deep or slight discoloration &gt;1/2" circle agg., or which seriously detracts</p>
+98046,root[0].defectScoringGuide.list[0].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[0].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[0].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[1].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[1].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[1].damage.value,Healed and 2 or more or >1/8" deep or 3/8" long,<p>Healed and 2 or more or &gt;1/8" deep or 3/8" long</p>
+98046,root[0].defectScoringGuide.list[1].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[1].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[1].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[1].seriousDamage.value,Unhealed and >1/8" long or deep or healed and >3/16" deep or healed >5/8" long,<p>Unhealed and &gt;1/8" long or deep or healed and &gt;3/16" deep or healed &gt;5/8" long</p>
+98046,root[0].defectScoringGuide.list[1].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[1].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[1].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[2].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[2].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[2].damage.value,Feeding injury materially detracts,<p>Feeding injury materially detracts</p>
+98046,root[0].defectScoringGuide.list[2].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[2].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[2].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[2].seriousDamage.value,Feeding injury seriously detracts or any worm hole,<p>Feeding injury seriously detracts or any worm hole</p>
+98046,root[0].defectScoringGuide.list[2].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[2].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[2].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[3].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[3].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[3].damage.value,Scars:Not dark or rough, 25% surface, or dark and rough >3/4" circle agg.Hayward Marks:Agg. more than 2 times length of 1 stem to blossom end mark or >3/16" deep or >1/8" longAlligator skin:>20% of surface agg. outside a 1-1/4" dia., area around stem scarHail:Unhealed or healed and >3/16" deep or >1/2" circle agg.,<p>Scars:Not dark or rough, 25% surface, or dark and rough &gt;3/4" circle agg.Hayward Marks:Agg. more than 2 times length of 1 stem to blossom end mark or &gt;3/16" deep or &gt;1/8" longAlligator skin:&gt;20% of surface agg. outside a 1-1/4" dia., area around stem scarHail:Unhealed or healed and &gt;3/16" deep or &gt;1/2" circle agg.</p>
+98046,root[0].defectScoringGuide.list[3].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[3].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[3].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[3].seriousDamage.value,Scars:Light and smooth >3/4" circle agg., fairly light and smooth >1/2" circle agg., or dark and rough >1/4" circle agg.Hayward Marks:Agg. more than length of 1 stem to blossom end mark or >1/16" deep or >1/8" longAlligator skin:>10% of surface agg. outside a 1-1/4" dia., area around stem scarHail:Healed and >1/8" deep or >1/4" circle agg.,<p>Scars:Light and smooth &gt;3/4" circle agg., fairly light and smooth &gt;1/2" circle agg., or dark and rough &gt;1/4" circle agg.Hayward Marks:Agg. more than length of 1 stem to blossom end mark or &gt;1/16" deep or &gt;1/8" longAlligator skin:&gt;10% of surface agg. outside a 1-1/4" dia., area around stem scarHail:Healed and &gt;1/8" deep or &gt;1/4" circle agg.</p>
+98046,root[0].defectScoringGuide.list[3].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[3].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[3].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[4].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[4].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[4].damage.value,>10% of surface,<p>&gt;10% of surface</p>
+98046,root[0].defectScoringGuide.list[4].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[4].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[4].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[4].seriousDamage.value,>20% of surface,<p>&gt;20% of surface</p>
+98046,root[0].defectScoringGuide.list[4].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[4].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[4].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[5].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[5].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[5].damage.value,Free from,<p>Free from</p>
+98046,root[0].defectScoringGuide.list[5].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[5].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[5].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[5].seriousDamage.value,Free from,<p>Free from</p>
+98046,root[0].defectScoringGuide.list[5].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[5].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[5].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[6].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[6].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[6].damage.value,>1/2" circle agg.,<p>&gt;1/2" circle agg.</p>
+98046,root[0].defectScoringGuide.list[6].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[6].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[6].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[6].seriousDamage.value,>5/8" circle agg.,<p>&gt;5/8" circle agg.</p>
+98046,root[0].defectScoringGuide.list[6].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[6].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[6].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[7].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[7].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[7].damage.value,Free from,<p>Free from</p>
+98046,root[0].defectScoringGuide.list[7].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[7].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[7].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[7].seriousDamage.value,Free from,<p>Free from</p>
+98046,root[0].defectScoringGuide.list[7].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[7].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[7].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[8].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[8].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[8].damage.value,>10% of surface,<p>&gt;10% of surface</p>
+98046,root[0].defectScoringGuide.list[8].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[8].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[8].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[8].seriousDamage.value,>25% of surface,<p>&gt;25% of surface</p>
+98046,root[0].defectScoringGuide.list[8].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[8].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[8].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[9].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[9].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[9].damage.value,Free from,<p>Free from</p>
+98046,root[0].defectScoringGuide.list[9].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[9].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[9].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[9].seriousDamage.value,Seriously detracting,<p>Seriously detracting</p>
+98046,root[0].defectScoringGuide.list[9].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[9].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[9].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[10].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[10].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[10].damage.value,Free from,<p>Free from</p>
+98046,root[0].defectScoringGuide.list[10].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[10].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[10].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[10].seriousDamage.value,Free from,<p>Free from</p>
+98046,root[0].defectScoringGuide.list[10].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[10].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[10].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[11].displayFlag,False,True
+98046,root[0].defectScoringGuide.list[11].dqaHelperText,exists,missing
+98046,root[0].defectScoringGuide.list[11].damage.value,Other defects not included above that materially detract from appearance scored as damage.,<p>Other defects not included above that materially detract from appearance scored as damage.</p>
+98046,root[0].defectScoringGuide.list[11].damage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[11].damage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[11].damage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.list[11].seriousDamage.value,Other defects not included above that seriously detract from appearance scored as serious damage.,<p>Other defects not included above that seriously detract from appearance scored as serious damage.</p>
+98046,root[0].defectScoringGuide.list[11].seriousDamage.dqaHelperChecked,missing,exists
+98046,root[0].defectScoringGuide.list[11].seriousDamage.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.list[11].seriousDamage.displayFlag,missing,exists
+98046,root[0].defectScoringGuide.dqaHelperText,missing,exists
+98046,root[0].defectScoringGuide.dqaHelperChecked,missing,exists
+98046,root[0]._class,missing,exists

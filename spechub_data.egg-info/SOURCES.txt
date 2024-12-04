@@ -5,6 +5,7 @@ core/dl_adls.py
 core/dl_base.py
 core/dl_config.py
 core/dl_dateutils.py
+core/dl_email.py
 core/dl_etlbase.py
 core/dl_logger.py
 core/dl_mongo.py

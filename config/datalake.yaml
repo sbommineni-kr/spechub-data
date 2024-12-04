@@ -44,6 +44,19 @@ mongodb-jobs:
       container_name: 'spechubdata-backup'
       collection_names: ['subcommodity_migration', 'subcommodity_dqa', 'specconfig_dqa', 'subcommodity_icon', 'dqahelp_subcommodity']
   
+  load_compare_backup_files:
+    arguments:
+      start_date: None
+      end_date: None
+      storage_connection: 
+      container_name: 'spechubdata-backup'
+      file_names: [ 'subcommodity_dqa.json','specconfig_dqa.json']
+      email:
+        from: 'sudheer.bommineni@kroger.com'
+        to: ['sudheer.bommineni@kroger.com']
+        subject: 'Spechub Data Backup Report'
+        body: "Hi, \n\nPlease find the attached Spechub data for date range - {previous_day} to {current_day} \n\nThanks, \nSpecHub Data team"  
+
   load_copy_between_envs:
     arguments:
       start_date: None
@@ -58,6 +71,7 @@ mongodb-jobs:
       end_date: None
       url: https://sc-fresh-{env}.kroger.biz/spechub/specs/subcommodities/
       collection_name: 'subcommodity_dqa'
+    
 
 
 
