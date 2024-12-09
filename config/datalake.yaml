@@ -71,6 +71,12 @@ mongodb-jobs:
       end_date: None
       url: https://sc-fresh-{env}.kroger.biz/spechub/specs/subcommodities/
       collection_name: 'subcommodity_dqa'
+  
+  load_perform_sanity_check:
+    arguments:
+      start_date: None
+      end_date: None
+      collection_name: 'subcommodity_dqa'
     
 
 
