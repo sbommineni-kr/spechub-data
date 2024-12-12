@@ -1,0 +1,2 @@
+collection,timestamp,subCommodityCode,subCommodityName,variations,database_name,object_id,operation_type,changes_summary
+subcommodity_dqa_changestream,2024-12-11 19:11:51 UTC,22222,Test22,,STAGE_SB,subcommodity_dqa_6759e3f770fb1e3f9030c674_1733944311,insert,New document created

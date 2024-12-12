@@ -30,6 +30,16 @@ mongodb-jobs:
       start_date: None
       end_date: None
   
+  load_export_report:
+    arguments:
+      start_date: None
+      end_date: None
+      email:
+        from: 'sudheer.bommineni@kroger.com'
+        to: ['sudheer.bommineni@kroger.com']
+        subject: 'Spechub Data changes Report'
+        body: "Hi, \n\nPlease find the attached Spechub data for the backend changes and UI changes during between the previous release and current release. All backend changes are perfomed only during the day of the release. \n\nThanks, \nSpecHub Data team"  
+  
   load_convert_all_docs:
     arguments:
     start_date: None
